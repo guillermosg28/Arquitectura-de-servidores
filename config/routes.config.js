@@ -14,6 +14,7 @@ router.delete('/posts/:id', sec.auth, posts.delete)
 
 /**User */
 router.post('/users', users.store)
+router.get('/activate', sec.auth_activate, users.activate)
 
 /**Auth */
 router.post('/login', users.login)
